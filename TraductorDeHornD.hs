@@ -172,17 +172,7 @@ Recibe una PL y regresa una lista de literales.
 Hint: Ya no necesita ninguna llamada a alguna funcion auxiliar
 -}
 creaLit :: PL -> [Literal String]
-creaLit a =
-    case a of 
-        Bot -> [ ]
-        Top -> [ ]
-        Var v -> [Lpos v]
-        Imp v b  -> (creaLit a) ++ (creaLit b)
-        Dis v b -> (creaLit a) ++ (creaLit b)
-        Con v b -> (creaLit a) ++ (creaLit b) 
-        Neg v -> creaLit v    
-        Syss v b -> (creaLit v) ++ (creaLit b)
-
+creaLit a = error "Falta implementar"
 
 
 {-
