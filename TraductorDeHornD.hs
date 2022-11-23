@@ -263,7 +263,7 @@ makeHorn (OR c)
         nLitPositivos = length litPositivos
         cabeza        = elementoEnLiteral (head litPositivos)
         cuerpo        = map elementoEnLiteral litNegativos 
-        
+
 
 -- Obtiene una lista de literales positivas de una lista de literales
 literalesPositivas :: [Literal String] -> [Literal String]
@@ -288,7 +288,7 @@ prueba2 = Syss (Neg (Con (Var "a1") (Neg (Var "a2"))) ) (Dis (Syss (Neg (Var "b1
 prueba3 :: PL 
 prueba3 = Con (Dis (Neg (Var "a1")) (Var "a2")) (Dis (Con (Neg (Var "b1")) (Neg (Var "b2"))) (Var "c1") )
 
-
+--prueba makeHorn, cnfAHorn
 
 c :: CNF String
 c= Cand[OR[Lpos "v", Lneg "c", Lneg "d", Lneg "e"], OR[Lneg "q", Lneg "w", Lpos "x", Lneg "z"],OR[Lneg "a", Lneg "p", Lneg "r", Lneg "f"]]
