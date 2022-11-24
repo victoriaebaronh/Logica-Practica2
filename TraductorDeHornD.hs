@@ -172,7 +172,9 @@ Recibe una PL y regresa una lista de literales.
 Hint: Ya no necesita ninguna llamada a alguna funcion auxiliar
 -}
 creaLit :: PL -> [Literal String]
-creaLit a = error "Falta implementar"
+creaLit (Var p) = [Lpos p]
+creaLit (Neg (Var p)) = [Lneg p]
+creaLit (Dis p q) = creaLit p  ++ creaLit q
 
 
 {-
