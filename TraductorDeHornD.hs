@@ -138,7 +138,7 @@ Recibe una PL y regresa una lista de Clasulas.
 Hint: Necesita la ayuda de la funcion auxiliar creaClausula en algunos casos.
 -}
 plACNF' :: PL -> [Clausula String]
-plACNF' a = error "Falta implementar"
+plACNF' phi = [creaClausula phi]
 
 
 
@@ -155,7 +155,7 @@ Hint: Necesita la ayuda de la funcion creaLit.
 
 
 creaClausula :: PL -> Clausula String
-creaClausula a = error "Falta implementar"
+creaClausula phi = OR (creaLit phi)
 
 {--
 Recibe una PL y regresa una lista de literales.
